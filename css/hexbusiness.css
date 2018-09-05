@@ -1,0 +1,511 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body{
+	font-family: Helvetica;
+	z-index: 1;
+}
+
+.clearfix{
+	clear: 	both;
+}
+
+.title {
+	background-color: #F6F6F6;
+	height: 48px;
+	width: : 100%;
+	padding-top: 20px;
+}
+
+.logo{
+	float:left;
+	margin-left: 100px;
+	color:#29B6F2;
+	font-size: 	37px;
+	font-weight:bold;
+}
+
+.contactInfo {
+	text-align: right;
+	margin-right: 100px;
+	color:#29B6F2;	
+}
+
+.contactList li{
+	display: inline;
+}
+
+.mail{
+	margin-right: 10px;
+}
+
+.svg-inline--fa {
+    margin-right: 5px;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.nav {
+	font-weight: 100%;
+	height: 50px;
+}
+.menu{
+	margin-left: 100px;
+}
+
+a, a:visited, a:link{
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu a, .serviceList a{
+  text-decoration: none;
+  background: #fff;
+  display: block;
+  text-align: center;
+  padding: 13px 45px 13px 0px;
+  color:black;	
+}
+
+.menu a:hover, .swiper-slide a:hover{
+	color: 	blue;
+
+}
+
+.menu>li{
+	float: 	left;
+	display: 	inline;
+}
+
+.aboutItem, .serviceItem{
+	opacity: 0;
+	position:absolute;
+	z-index: 90;
+	transition: all 1s;
+}
+
+.aboutOpen:hover .aboutItem {
+		opacity:1;}
+
+.serviceOpen:hover .serviceItem {
+		opacity:1;}
+
+.swiper-container {
+    width: 100%;
+    height: 510px;
+}
+
+.slide1{
+	 width: 100%;
+    height: 510px;
+	background-image :url('http://www.51pptmoban.com/d/file/2015/05/17/3b4d12403e9cdf46300c0624611af991.jpg');
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+
+
+.slide2{
+	 width: 100%;
+    height: 510px;
+	background-image :url('https://photo.16pic.com/00/61/69/16pic_6169527_b.jpg');
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+
+
+h1 {
+	text-align: center;
+    font-family: 標楷體;
+    padding-top: 140px;
+    font-size: 50px;
+    line-height: 1.4;
+    color:white;
+    text-shadow:black 0.1em 0.1em 0.2em;
+
+ }
+
+.swiper-slide p{
+		margin-top:5px;
+		text-align: center;
+}
+
+.swiper-slide a{	
+	line-height: 	100px;
+	color:white;
+    text-shadow:black 0.1em 0.1em 0.2em;
+
+}
+
+
+/*基礎框架設定*/
+.aboutSection, .serviceSection, .sloganText, .team, .footer, .copyrightContainer{
+	width: 1048px;
+	margin: 0 auto;
+}
+
+.aboutBox {
+	float: left;
+}
+
+.aboutText {
+	text-align: left;
+	padding-top: 90px;
+}
+
+h2 {
+	font-size: 32px;
+	padding-bottom: 35px;
+
+}
+
+.aboutText:hover h2{
+	color:#3367D6;
+	font-size: 34px;
+}
+
+
+
+.aboutText p {
+	padding-bottom: 35px;
+	width: 370px;
+	margin-right: 0px;
+	font-size: 16px
+}
+
+.aboutText a {
+	font-size: 12px;
+	color: black;
+
+}
+
+.svg-inline--fa {
+    color: #3367D6;
+}
+
+.aboutText a:hover .svg-inline--fa {
+    margin-left: 7px;
+}
+
+
+.pcPic {
+    padding-left: 100px;
+    padding-top: 60px;
+}
+
+.serviceBackgroundColor {
+	background-color: #F6F6F6;
+	width: 100%;
+	height: 400px;
+}
+
+
+.serviceHeader {
+	text-align: left;
+	padding-top: 20px;
+}
+
+.serviceBox{
+	float:left;
+	width: 50%;
+
+}
+
+.serviceBox p {
+	font-size: 16px;
+}
+
+.serviceSection .svg-inline--fa {
+    margin-right: 5px;
+    float: left;
+    color: gray;
+    font-size: 25px;
+}
+
+.serviceBox:hover .svg-inline--fa{
+	color:#3367D6;
+}
+
+.serviceBox:hover h3{
+	font-size: 25px;
+}
+
+.serviceText {
+	padding-left: 65px;
+	width: 300px;
+}
+
+h3 {
+	font-size: 22px;
+	padding-bottom: 10px;
+}
+
+.serviceSection div:nth-of-type(1n+4){
+	padding-top: 10px;
+}
+
+
+.slogan{
+	height: 220px;
+	width: 100%;
+	background-image :url('../pic/sloganPic.jpg');
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+	text-align: center;
+	transition: all 1s;
+
+}
+
+.slogan:hover{
+	opacity:0.9;
+}
+
+.slogan:hover h1{
+		font-size:47px;
+	
+	}	
+
+
+
+.slogan h1{
+	padding-top:75px;
+	font-size:45px;
+	text-align: left;
+	text-shadow: 1px 1px gray;
+}
+
+.slogan a{
+	color: white;
+	font-size: 16px;
+	text-shadow: 1px 1px gray;
+}
+
+.slogan a:hover .svg-inline--fa {
+    margin-left: 7px;
+}
+
+.sloganText {
+	text-align: left;
+
+}
+
+.teamTitle {
+	padding-top: 20px;
+	text-align: center;
+}
+
+
+.personBox {
+	float:left;
+	width: 33%;
+}
+
+.personPic {
+	position: relative;
+	height: 430px;
+	width: 270px;
+	background-image :url('../pic/person8.jpg');
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+	text-align: center;
+	opacity:0.9;
+	transition: all 2s;
+	box-shadow:3px 3px 12px gray;
+
+
+}
+
+.personPic2 {
+	background-image :url('../pic/person6.jpg');
+}
+
+.personPic3 {
+	background-image :url('../pic/person4.jpg');
+}
+
+.personPic p {
+	display: block;
+}
+
+.personText {
+	position: absolute;
+	bottom: 0;
+	width: 270px;
+	height: 75px;
+	background-color: #dcd0d0;
+	padding-top: 15px;
+	transition:all 1s;
+
+}
+
+.personContact {
+	position: absolute;
+	bottom: 0;
+	width:128px;
+	left: 75px;
+	height: 35px;
+	background-color: #dcd0d0;
+	padding-top: 15px;
+	transition:all 1s;
+	font-size: 18px;
+}
+
+.personContact .svg-inline--fa {
+    margin-left: 5px;
+    color:#011b28 !important;
+}
+
+
+.jobTitle {
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	height: 35px;
+	padding-top: 15px;
+	z-index: -1;
+	transition:all 1s;
+	font-size: 16px;
+}
+
+
+
+
+
+.personPic:hover .personContact {
+	position: absolute;
+	bottom: 160px;
+    width: 160px;
+    left: 60px;
+	background-color: #dcd0d0db;
+    opacity: 0.8;
+	border-radius:10px;
+	
+}
+
+.personPic:hover .personText {
+	background-color: #011b28d1;
+	color: white;
+}
+
+
+.personPic:hover .jobTitle {
+	z-index: 1;
+	font-size: 	23px;
+	color: white;
+}
+
+
+.personContact a:hover {
+	font-size: 25px;
+}
+
+.personPic:hover {
+	opacity: 0.8;
+}
+
+.footerBackground {
+	background-color: #b5b5b5;
+	width: 100%;
+	height: 250px;
+	margin-top: 40px;
+}
+
+
+.footerbox {
+	float: left;
+	width:25%;
+}
+
+.footerContent {
+	padding-right: 10px;
+	font-size: 16px;
+
+}
+
+.footerContent p{
+	display: inline;
+	line-height: 23px;
+}
+
+.footerbox h4 {
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.copyrightBackground {
+	background-color: #191B1F;
+	width: 100%;
+	height: 25px;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+
+.copyright {
+	float: left;
+	color: #5E6066;
+}
+
+.footerContactIcon {
+	float:right;
+}
+
+.footerContactIcon{
+	padding-right: 60px;
+}
+
+.footerContactIcon .svg-inline--fa {
+	color: #5E6066;
+	margin-right: 30px;
+}
+
+.footerContactIcon .svg-inline--fa:hover{
+	color: #29B6F2;
+}
+
+.topButton{
+	position: fixed;
+    bottom: 5px;
+    right: 5px;
+    font-size: 25px;
+}
+
+.topButton .svg-inline--fa {
+	color: #5E6066;
+}
+
+.fa-external-link {
+  *zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = '&#xf08e;');
+}
