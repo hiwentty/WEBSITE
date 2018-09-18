@@ -33,6 +33,179 @@ body{
 	z-index: 1;
 }
 
+/*pure-CSS START */
+
+/*!
+Pure v1.0.0
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+.pure-button {
+    /* Structure */
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.pure-button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/* Inherit .pure-g styles */
+.pure-button-group {
+    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+    *letter-spacing: normal; /* reset IE < 8 */
+    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+}
+
+.opera-only :-o-prefocus,
+.pure-button-group {
+    word-spacing: -0.43em;
+}
+
+.pure-button-group .pure-button {
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+
+/*csslint outline-none:false*/
+
+.pure-button {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0.5em 1em;
+    color: #444; /* rgba not supported (IE 8) */
+    color: rgba(0, 0, 0, 0.80); /* rgba supported */
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.pure-button-hover,
+.pure-button:hover,
+.pure-button:focus {
+    /* csslint ignore:start */
+    filter: alpha(opacity=90);
+    /* csslint ignore:end */
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.pure-button:focus {
+    outline: 0;
+}
+.pure-button-active,
+.pure-button:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: #000\9;
+}
+
+.pure-button[disabled],
+.pure-button-disabled,
+.pure-button-disabled:hover,
+.pure-button-disabled:focus,
+.pure-button-disabled:active {
+    border: none;
+    background-image: none;
+    /* csslint ignore:start */
+    filter: alpha(opacity=40);
+    /* csslint ignore:end */
+    opacity: 0.40;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.pure-button-hidden {
+    display: none;
+}
+
+.pure-button-primary,
+.pure-button-selected,
+a.pure-button-primary,
+a.pure-button-selected {
+    background-color: rgb(0, 120, 231);
+    color: #fff;
+}
+
+/* Button Groups */
+.pure-button-group .pure-button {
+    margin: 0;
+    border-radius: 0;
+    border-right: 1px solid #111;  /* fallback color for rgba() for IE7/8 */
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.pure-button-group .pure-button:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.pure-button-group .pure-button:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-right: none;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+/* special setting*/
+
+.read-btn {
+	background: #3367d6;
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+.red {
+	background: rgb(202, 60, 60);
+}
+
+
+/*pure-CSS END */
+
+
+
 .clearfix{
 	clear: 	both;
 }
@@ -44,7 +217,7 @@ body{
 	padding-top: 20px;
 }
 
-.logo{
+.title p{
 	float:left;
 	margin-left: 100px;
 	color:#29B6F2;
@@ -52,14 +225,31 @@ body{
 	font-weight:bold;
 }
 
-.contactInfo {
-	text-align: right;
+@media (max-width: 767px){
+	.title {
+		padding-bottom: 8px;
+	}
+	.title p {
+		float:none;
+		text-align: center;
+		margin:0;
+}	
+}
+
+.contactList {
+	float: right;
 	margin-right: 100px;
 	color:#29B6F2;	
 }
 
+@media (max-width:768px)  {
+	.contactList {
+    display: none;
+}	
+}
+
 .contactList li{
-	display: inline;
+	float:left;
 }
 
 .mail{
@@ -70,13 +260,12 @@ body{
     margin-right: 5px;
 }
 
-ol, ul {
+.title ul, .nav ul{
   list-style: none;
 }
 
 .nav {
 	font-weight: 100%;
-	height: 50px;
 }
 .menu{
 	margin-left: 100px;
@@ -96,7 +285,7 @@ a, a:visited, a:link{
   color:black;	
 }
 
-.menu a:hover, .swiper-slide a:hover{
+.menu a:hover{
 	color: 	blue;
 
 }
@@ -104,6 +293,22 @@ a, a:visited, a:link{
 .menu>li{
 	float: 	left;
 	display: 	inline;
+}
+
+@media (max-width: 767px) {
+	.menu>li {
+	    width: 50%;
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+
+	.menu {
+		margin:0;
+	}
+
+	.menu a{
+		padding:0;
+	}
 }
 
 .aboutItem, .serviceItem{
@@ -125,7 +330,6 @@ a, a:visited, a:link{
 }
 
 .slide1{
-	 width: 100%;
     height: 510px;
 	background-image :url('http://www.51pptmoban.com/d/file/2015/05/17/3b4d12403e9cdf46300c0624611af991.jpg');
 	background-repeat: no-repeat;
@@ -135,7 +339,6 @@ a, a:visited, a:link{
 
 
 .slide2{
-	 width: 100%;
     height: 510px;
 	background-image :url('https://photo.16pic.com/00/61/69/16pic_6169527_b.jpg');
 	background-repeat: no-repeat;
@@ -144,7 +347,7 @@ a, a:visited, a:link{
 }
 
 
-h1 {
+.swiper-slide h1, .sloganText h1{
 	text-align: center;
     font-family: 標楷體;
     padding-top: 140px;
@@ -155,24 +358,41 @@ h1 {
 
  }
 
+ @media (max-width: 767px) {
+ 	.swiper-slide h1 {
+ 		font-size: 38px;
+ 	}
+
+ 	.swiper-container {
+ 		height: 470px;
+ 	}
+ }
+
 .swiper-slide p{
 		margin-top:5px;
 		text-align: center;
 }
 
-.swiper-slide a{	
+/*.swiper-slide a{	
 	line-height: 	100px;
 	color:white;
     text-shadow:black 0.1em 0.1em 0.2em;
 
 }
-
+*/
 
 /*基礎框架設定*/
 .aboutSection, .serviceSection, .sloganText, .team, .footer, .copyrightContainer{
-	width: 1048px;
+	max-width: 1048px;
 	margin: 0 auto;
+	padding-bottom: 20px;
 }
+
+/*@media (max-width: 768px){
+	.aboutSection, .serviceSection, .sloganText, .team, .footer, .copyrightContainer{
+	width: 100%;
+}
+}*/
 
 .aboutBox {
 	float: left;
@@ -183,7 +403,15 @@ h1 {
 	padding-top: 90px;
 }
 
-h2 {
+@media (max-width: 768px) {
+	.aboutText {
+    text-align: center;
+    padding-top: 41px;
+}
+}
+
+
+.aboutText h2, .serviceSection h2, .team h2 {
 	font-size: 32px;
 	padding-bottom: 35px;
 
@@ -203,6 +431,12 @@ h2 {
 	font-size: 16px
 }
 
+@media (max-width: 768px) {
+	.aboutText p {
+	width: auto;
+}
+}
+
 .aboutText a {
 	font-size: 12px;
 	color: black;
@@ -219,18 +453,23 @@ h2 {
 
 
 .pcPic {
-    padding-left: 100px;
+    padding-left: 60px;
     padding-top: 60px;
+}
+
+@media (max-width:768px)  {
+	.pcPic {
+    display: none;
+}	
 }
 
 .serviceBackgroundColor {
 	background-color: #F6F6F6;
 	width: 100%;
-	height: 400px;
 }
 
 
-.serviceHeader {
+.serviceSection h2{
 	text-align: left;
 	padding-top: 20px;
 }
@@ -244,6 +483,8 @@ h2 {
 .serviceBox p {
 	font-size: 16px;
 }
+
+
 
 .serviceSection .svg-inline--fa {
     margin-right: 5px;
@@ -262,8 +503,34 @@ h2 {
 
 .serviceText {
 	padding-left: 65px;
-	width: 300px;
+	max-width: 300px;
 }
+
+@media (max-width: 767px){
+	.serviceSection h2 {
+    text-align: center;
+	}
+
+	.serviceBox {
+		padding-bottom: 20px;
+		float:none;
+		width: 100%;
+		padding-left: 20px;
+	}
+	
+	.serviceBox .svg-inline--fa {
+    	float: left;
+	}
+
+	.serviceText {
+		padding-left:2.5em;
+		padding-right: 2.5em;
+		max-width: 500px;
+	}
+
+}
+
+
 
 h3 {
 	font-size: 22px;
@@ -277,7 +544,6 @@ h3 {
 
 .slogan{
 	height: 220px;
-	width: 100%;
 	background-image :url('../pic/sloganPic.jpg');
 	background-repeat: no-repeat;
 	background-position:center;
@@ -296,13 +562,22 @@ h3 {
 	
 	}	
 
-
-
 .slogan h1{
 	padding-top:75px;
 	font-size:45px;
 	text-align: left;
 	text-shadow: 1px 1px gray;
+}
+
+
+@media (max-width: 767px) {
+	.slogan:hover h1{
+		font-size:35px;
+	}	
+	
+	.slogan h1 {
+    font-size: 33px;
+	}
 }
 
 .slogan a{
@@ -320,7 +595,7 @@ h3 {
 
 }
 
-.teamTitle {
+.team h2{
 	padding-top: 20px;
 	text-align: center;
 }
@@ -328,13 +603,15 @@ h3 {
 
 .personBox {
 	float:left;
-	width: 33%;
+	width: 31.33333%;
+	margin-left: 1%;
+	margin-right: 1%;
 }
 
 .personPic {
 	position: relative;
 	height: 430px;
-	width: 270px;
+	max-width: 270px;
 	background-image :url('../pic/person8.jpg');
 	background-repeat: no-repeat;
 	background-position:center;
@@ -347,6 +624,20 @@ h3 {
 
 }
 
+
+@media (max-width:767px) {
+	.personBox {
+		float:none;
+		width: auto;
+	}
+
+	.personPic {
+		margin:0 auto;
+		margin-bottom: 20px;
+	}
+}
+
+
 .personPic2 {
 	background-image :url('../pic/person6.jpg');
 }
@@ -355,14 +646,11 @@ h3 {
 	background-image :url('../pic/person4.jpg');
 }
 
-.personPic p {
+.personText{
 	display: block;
-}
-
-.personText {
 	position: absolute;
 	bottom: 0;
-	width: 270px;
+	width: 100%;
 	height: 75px;
 	background-color: #dcd0d0;
 	padding-top: 15px;
@@ -423,7 +711,7 @@ h3 {
 .personPic:hover .jobTitle {
 	z-index: 1;
 	font-size: 	23px;
-	color: white;
+	color:white;
 }
 
 
@@ -438,7 +726,6 @@ h3 {
 .footerBackground {
 	background-color: #b5b5b5;
 	width: 100%;
-	height: 250px;
 	margin-top: 40px;
 }
 
@@ -454,6 +741,7 @@ h3 {
 
 }
 
+
 .footerContent p{
 	display: inline;
 	line-height: 23px;
@@ -464,10 +752,26 @@ h3 {
 	padding-top: 15px;
 }
 
+@media (max-width: 767px) {
+	.footerbox {
+		float: none;
+		width:80%;
+		margin:0 auto;
+	}
+	
+	.footerbox h4 {
+	text-shadow: 1px 1px grey;
+	color: white;
+	padding-bottom: 8px;
+	font-weight:bold;
+	}
+
+}
+
+
 .copyrightBackground {
 	background-color: #191B1F;
 	width: 100%;
-	height: 25px;
     font-size: 16px;
     padding-top: 10px;
 }
@@ -480,9 +784,6 @@ h3 {
 
 .footerContactIcon {
 	float:right;
-}
-
-.footerContactIcon{
 	padding-right: 60px;
 }
 
@@ -508,4 +809,15 @@ h3 {
 
 .fa-external-link {
   *zoom:expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = '&#xf08e;');
+}
+
+@media (max-width: 767px) {
+	.footerContactIcon {
+		display: none;
+	}
+
+	.topButton{
+	display: none;
+	}
+	
 }
