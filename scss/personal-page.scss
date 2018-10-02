@@ -441,6 +441,7 @@ a {
   padding-top: $gutter * 3;
   padding-bottom: $gutter * 3;
 }
+
 .p-x-3 {
   padding-left: $gutter * 3;
   padding-right: $gutter * 3;
@@ -487,6 +488,12 @@ a {
   -webkit-filter: blur(0);
   filter: blur(0);
 }
+
+// Hover-nav-a
+.nav-menu li a:hover {
+  color: gray;
+}
+
 // animated
 .animated {
   opacity: 0;
@@ -508,4 +515,12 @@ a {
 .text-intro{
   padding-right: 76px;
 }
+
+// 加長portfolio頁面
+
+.p-portfolio {
+  padding-top: 50px;
+  padding-bottom: 400px;
+}
+
 

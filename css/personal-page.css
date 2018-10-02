@@ -4242,6 +4242,9 @@ a {
   -webkit-filter: blur(0);
   filter: blur(0); }
 
+.nav-menu li a:hover {
+  color: gray; }
+
 .animated {
   opacity: 0;
   -webkit-transition: all 1.5s;
@@ -4263,3 +4266,7 @@ a {
 
 .text-intro {
   padding-right: 76px; }
+
+.p-portfolio {
+  padding-top: 50px;
+  padding-bottom: 400px; }
