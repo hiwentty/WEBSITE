@@ -1,0 +1,511 @@
+@import "_mixin.scss";
+@import "_reset.scss";
+@import "_fontawesome.min.scss";
+
+
+// font
+$font-family: "Microsoft JhengHei",PMingLiU,MingLiu,"Segoe UI","Helvetica",Garuda,Arial,sans-serif;
+$font-size: 16px;
+
+// gutter
+$gutter: 15px;
+
+// color
+$background-color: #fcfbf5;
+$font-color: #333;
+$font-color-gray: lighten($font-color, 55%);
+
+$brand-primary: #039dff;
+$brand-success: #00CC99;
+$brand-accent: #e26789;
+$brand-dark: $font-color;
+$brand-facebook: #4080ff;
+
+// navbar
+$navbar-height: 42px;
+
+
+//main-top- content
+.main-top {
+  display: table;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.main-top-content {
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+}
+.main-top-content > h2 {
+  font-size: 35px;
+}
+.main-top-content > h2 span {
+  text-transform: uppercase;
+}
+.main-top-content > p {
+  font-size: 21px;
+}
+.main-top-content ul {
+  list-style: none;
+  margin-top: 5px;
+  padding: 0;
+  font-size: 25px;
+}
+.main-top-content ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+
+// progress
+$progress-height: 20px;
+
+// section
+$section-gutter: 45px;
+
+// zindex
+$navbar-zindex: 1000;
+$fab-zindex: 1045;
+
+// breakpoint
+$mobile-size: 779px;
+
+//** Base **//
+* {
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  line-height: 1.5;
+  font-family: $font-family;
+}
+h1 {
+  font-size: $font-size*3;
+}
+h2 {
+  font-size: $font-size*2.5;
+}
+h3 {
+  font-size: $font-size*2;
+}
+a {
+  color: $brand-primary
+}
+
+//** Grid **//
+.wrap {
+  overflow: hidden;
+  background: url("../pic/background-resume.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.col-half,
+.col-three-one,
+.col-quarter {
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-half.bar {
+    letter-spacing: 3px;
+}
+.col-half-center {
+  margin-left: 25%;
+}
+.col-three-one {
+  width: 33.33333%;
+}
+.col-three-one-center {
+  margin-left: 33.33333%;
+}
+.col-quarter {
+  width: 25%;
+}
+
+@media (max-width: $mobile-size) {
+  .col-half,
+  .col-three-one,
+  .col-quarter {
+    float: none;
+    width: 100%;
+  }
+
+  .col-half-center, .col-three-one-center {
+    margin-left: 0;
+  }
+}
+
+//** Navbar **//
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $navbar-zindex;
+  &.navbar-bottom {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.navbar-default {
+  background-color: rgba(black, .75);
+  box-shadow: 0 0 5px rgba(black, .15)
+}
+
+.logo {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: white;
+  font-size: $font-size + 2;
+}
+
+.nav-menu {
+  margin: 0;
+  list-style: none;
+  li {
+    float: left;
+  }
+  a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+    font-size: $font-size + 2;
+    &:hover, &:active, &:focus {
+      background-color: rgba(black, .05);
+    }
+    &.active {
+      box-shadow: 0 -2px 0 $brand-accent inset;
+    }
+  }
+
+  // style
+  .nav-accent {
+    color: white;
+    background-color: $brand-accent;
+    &:hover, &:active, &:focus {
+      color: white;
+      background-color: darken($brand-accent, 15%);
+    }
+    &.active {
+      box-shadow: 0 -2px 0 darken($brand-accent, 15%) inset;
+    }
+  }
+}
+
+//** Section **//
+.section {
+  padding: 35px 0;
+}
+.section-rotate {
+
+  margin-left: -80px;
+  margin-right: -80px;
+  padding: 35px 80px 35px 80px;
+}
+
+//** Progress bar **//
+.progress {
+  height: $progress-height;
+  overflow: hidden;
+  background-color: rgba(#fafafa, .45);
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  position: relative;
+}
+.progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  font-size: 12px;
+  line-height: $progress-height;
+  color: black;
+  text-align: center;
+  background-color: #f6c523;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  transition: width 3s ease;
+}
+
+
+//** Partials Header **//
+.header-wrap {
+  height: 800px;
+  width: 130%;
+  margin: -10% -15% 0 -15%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 10%;
+  overflow: hidden;
+}
+.header-img {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/hexschool-api.appspot.com/o/tutorials%2FRWD%2Fman-for-scroll-demo-light.png?alt=media&token=625670d9-4180-434b-a4bd-c1b1db0d0604);
+  background-position: right 0;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.social i {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border: 1px solid #fff;
+    font-size: 27px;
+    color: #fff;
+    border-radius: 50px;
+    transition:1s;
+}
+
+.social i:hover {
+  color: grey;
+  font-size: 30px;
+  border-color: grey;
+}
+
+
+//** Utilities **//
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.h100 {
+  height: 100%;
+}
+.v-center {
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+.relative {
+  position: relative;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+.circle-border {
+  border: transparent 2px solid;
+  border-radius: 100%;
+}
+.border-white {
+  border-color: white;
+}
+
+.bg-darker {
+  background-color: darken($background-color, 5%);
+}
+.bg-dark {
+  background-color: $brand-dark;
+}
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-yellow {
+      background: #eaddb4;
+}
+
+.bg-green{
+  background: #62929a;
+}
+.text-primary {
+  color: $brand-primary;
+}
+.text-success {
+  color: $brand-success;
+}
+.text-accent {
+  color: $brand-accent;
+}
+.text-white {
+  color: white;
+  text-decoration: none;
+}
+.text-gray {
+  color: $font-color-gray
+}
+.text-right {
+  text-align: right;
+}
+
+.text-blue {
+  color: #385E8D;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-space-3 {
+  letter-spacing: 3px;
+}
+
+.block {
+  display: block;
+}
+.box-shadow {
+  position: relative;
+  &:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    box-shadow: 0 0 15px rgba(black, .15);
+  }
+}
+
+
+// margin
+.m-b-0 {
+  margin-bottom: 0;
+}
+.m-t-1 {
+  margin-top: $gutter;
+}
+.m-t-3 {
+  margin-top: $gutter*3;
+}
+.m-b-2 {
+  margin-bottom: $gutter*2;
+}
+.m-b-1 {
+  margin-bottom: $gutter*1;
+}
+.m-y-1 {
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+}
+.m-y-2 {
+  margin-top: $gutter*2;
+  margin-bottom: $gutter*2;
+}
+.m-y-3 {
+  margin-top: $gutter*3;
+  margin-bottom: $gutter*3;
+}
+.m-x-1 {
+  margin-left: $gutter;
+  margin-right: $gutter;
+}
+.m-x-2 {
+  margin-left: $gutter*2;
+  margin-right: $gutter*2;
+}
+.m-x-5 {
+  margin-left: $gutter*5;
+  margin-right: $gutter*5;
+}
+.p-y-1 {
+  padding-top: $gutter;
+  padding-bottom: $gutter;
+}
+.p-y-2 {
+  padding-top: $gutter * 2;
+  padding-bottom: $gutter * 2;
+}
+.p-y-3 {
+  padding-top: $gutter * 3;
+  padding-bottom: $gutter * 3;
+}
+.p-x-3 {
+  padding-left: $gutter * 3;
+  padding-right: $gutter * 3;
+}
+.p-a-3 {
+  padding: $gutter * 3;
+}
+
+// align
+.text-center {
+  text-align: center;
+}
+
+// rwd
+.img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// hidden
+@media (max-width: $mobile-size){
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+@media (min-width: $mobile-size){
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+
+// Hover-pic
+
+.col-three-one img {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.col-three-one img:hover {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+// animated
+.animated {
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translateY(50px);
+}
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+//細部調整
+
+.pic-person {
+      margin-left: 76px;
+    border-radius: 30px;
+}
+
+.text-intro{
+  padding-right: 76px;
+}
+

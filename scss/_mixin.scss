@@ -1,0 +1,37 @@
+@mixin hide-text {
+	text-indent:101%;
+	overflow: hidden;
+	white-space:nowrap;
+}
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin full-background() {
+	background-position:center;
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+
+@mixin ipad() {
+	@media (max-width: 768px) {
+		@content
+	}
+}
+
+@mixin phone() {
+	@media (max-width: 767px){
+		@content
+	}
+}
+
+@mixin phone-s() {
+	@media (max-width: 414px){
+		@content
+	}
+}

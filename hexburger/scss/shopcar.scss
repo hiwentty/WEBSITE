@@ -1,0 +1,305 @@
+@import "layout";
+@import "buttons-min";
+
+.shopcar-wrap {
+	background: #EFE9E7;
+	a {
+		text-decoration: none;
+	}
+}
+
+.shopcar {
+	background:#EFE9E7;
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-top: 48px;
+	color:$main-color;
+	font-family: MicrosoftJhengHeiRegular;
+	h1 {
+		font-size: 20px;
+	}
+}
+
+.shopcar-menu {
+	width: 25%;
+	float: left;
+	@include phone {
+		float: none;
+		width: 100%;
+	}
+	h1{
+		margin-bottom: 16px;
+	}
+	.fab {
+    font-size: 32px;
+    padding-right: 15px;
+	}
+	li {
+		width: 100%;
+		height: 35px;
+		line-height: 32px;
+		font-size: 16px;
+		padding-left: 8px;
+		border-bottom: 1px solid #3D1101;
+		color:$main-color;
+		background:#EFE9E7;
+		a {
+			width: 100%;
+			height: 100%;
+			color:inherit;
+			background:inherit;
+		}
+		a:hover {
+			font-size: 18px;
+		}		
+	}
+}
+
+.click-color {
+	background: #3D1101 !important;
+	color:#EFE9E7 !important;
+}
+
+.shopcar-content {
+	width: 75%;
+	float: right;
+	@include phone {
+		float: none;
+		width: 100%;
+	}
+	.shopcar-content-header {
+		text-align: right;
+		padding-bottom: 22px;
+		padding-left:2%;
+		@include phone {
+			padding-left: 0;
+		}
+		.search-container {
+  			float: left;
+  			position: relative;
+  			@include phone {
+  				float: none;
+  			}
+		}
+		form {
+			@include phone {
+				margin-top: 23px;
+				margin-bottom: 20px;
+			}
+		}
+		input[type=text] {
+		 	padding: 6px;
+		 	margin-top: 8px;
+			font-size: 17px;
+		 	border: none;
+		 	border: 2px solid #3D1101;
+    		width: 424px;
+    		height: 32px;
+    		background: none;
+    		@include phone {
+    			width: 100%;
+    		}
+		}
+		.search-container button {
+			float: right;
+			margin-top: 8px;
+			background: #3D1101;
+			font-size: 17px;
+			border: none;
+			cursor: pointer;
+			width: 36px;
+    		height: 32px;
+    		color: white;
+    		position: absolute;
+    		top:0;
+    		right: 0;
+    		@include phone {
+    			margin-right:0;
+    		}
+		}
+		.checkout-container {
+			position: relative;
+			float: right;
+			margin-top: 13px;
+			a {
+				display: inline;
+				margin-left: 6px;
+   				margin-right: 6px;
+				font-size: 16px;
+				color:$main-color;
+				}
+			.fa {
+			    font-weight: 900;
+			    font-size: 27px;
+				}
+			.line {
+				display: inline-block;
+				width: 1px;
+				height: 14px;
+				background: $main-color;
+				@include phone {
+					margin-right: 5px;
+				}
+			}
+			.checkout-number {
+				position: absolute;
+			    top: -8px;
+			    right: -5px;
+			    width: 16px;
+			    height: 16px;
+			    background: #FF5E45 100%;
+			    border-radius: 50%;
+			    text-align: center;
+			    color: white;
+			    font-family: MicrosoftJhengHeiRegular;
+			    font-size: 12px;
+			    padding-top: 2px;
+			    padding-left: 2px;
+			}
+
+		}
+
+	}
+}
+
+.shopcar-product {
+	li {
+		width:31.33333%;
+		float:left;
+		margin-bottom: 30px;
+		box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+		text-align: center;
+		color: $main-color;
+		margin-left: 2%;
+		position: relative;
+		@include ipad {
+			width: 42.5%;
+			margin-left: 5%;
+		}
+		@include phone-s {
+			float: none;
+			margin-left: auto;
+			margin-right:auto;
+			width: 90%;
+		}
+		img {
+			height: 115px;
+			width: 100%;
+			@include phone-s {
+				height: 130px;
+			}
+		}
+		h1 {
+			padding-top: 11px;
+			line-height: 1.2em
+		}
+		h1.product-price {
+			padding-top: 0;
+			padding-bottom: 14px;
+		}
+		p {
+			font-size: 12px;
+			line-height: 1.2em;
+		}
+		p.product-name-e:after {
+			content: "";
+			margin: 10px auto 20px auto;
+			border-top: 1px solid rgb(61, 17, 1);
+			display: block;
+			width: 50%;
+		}
+		a.add-car {
+			border: 2px solid #FF5E45;
+		    border-radius: 3px;
+		    width: 85%;
+		    height: 30px;
+		    font-size: 14px;
+		    padding: 5px 10% 5px 10%;
+		    color: #FF5E45;
+		    margin-bottom: 10px;
+		    background: none;
+		}
+		a.add-car:hover {
+			background: #ff5e45ba;
+			color: white;
+		}
+		a.heart-empty {
+			position: absolute;
+			top:0;
+			left:0;
+			color: white;
+		    padding-left: 10px;
+		    padding-top: 10px;
+		    z-index:99;
+		}
+		a.heart-full {
+			position: absolute;
+			top:0;
+			left:0;
+			color: white;
+		    padding-left: 10px;
+		    padding-top: 10px;
+		    display: none;
+		}
+	}
+	li:hover {
+		background: #e8ddbe;
+	}	
+}
+
+.heart-full.heart-show{
+	display: block !important;
+}
+
+//ribon start
+
+.ribbon-wrapper-green {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+.ribbon-green {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background-color: #00CC99;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45)); 
+  background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45); 
+  color: #6a6340;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid #6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-green:before {
+  left: 0;
+}
+.ribbon-green:after {
+  right: 0;
+}
+//ribon end

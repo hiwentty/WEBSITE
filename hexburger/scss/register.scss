@@ -1,0 +1,156 @@
+@import "layout";
+@import "_buttons-min.scss";
+@import "_forms-min.scss";
+
+//pure button start
+.button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+
+        .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+//pure button end
+
+
+.register {
+	background: $background-color;
+	padding: 50px 20% 0 20%;
+	@include phone {
+		padding: 50px 2% 0 2%;
+	}
+	h1 {
+		font-family: NotoSansCJKtc-Black;
+		font-size: 48px;
+		color: #3D1101;
+		letter-spacing: 1px;
+		text-align: center;
+		font-weight: 900;
+	}
+	h2 {
+		font-family: NotoSansCJKtc-Medium;
+		font-size: 20px;
+		color: #3D1101;
+		padding-bottom: 35px;
+		text-align: center;
+		padding-top: 5px;
+	}
+	.register-section {
+		padding: 2%;
+		color: #3D1101;
+	    background: #EFE9E7;
+	    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+	    border-top: #FF5E45 4px solid;
+	    position: relative;
+		.register-box {
+			width: 50%;
+			float: left;
+			@include phone {
+				float: none;
+				width: 100%;
+			}
+		}
+		h3 {
+			text-align: center;
+    		font-weight: bolder;
+    		font-family: NotoSansCJKtc-Black; 
+    		font-size: 18px; 
+    		color: #3D1101;
+    		padding-bottom: 16px;
+		}
+		.regulation {
+			padding-top: 9.6px;
+		    font-family: MicrosoftJhengHeiRegular;
+    		font-size: 18px;
+    		color: #3D1101;
+    		line-height: 1.0em;
+    		p {
+    			font-family: MicrosoftJhengHeiRegular;
+			    font-size: 12px;
+			    color: #3D1101;
+    		}
+    		span{
+    			font-size: 18px;
+    		}
+		}
+		.form {
+			@include phone {
+			    margin-top: 10px;
+			}
+			fieldset {
+				margin: 0;
+    			padding: .35em 0 .75em;
+    			border: 0;
+    			position: relative;
+    			font-family: MicrosoftJhengHeiRegular;
+				font-size: 16px;
+				color: #3D1101;
+				margin-left: 20px;
+			    padding-bottom: 0;
+			    @include phone {
+		    	    margin-left: 0;
+			    }
+    			input {
+    				width: 100%;
+    				height: 32px;
+    				margin-bottom: 15px;
+				   	padding-left: 27px;
+    			}
+    			input#password {
+    				margin-bottom: 0;
+    			}
+    			i.email-icon{
+    				position: absolute;
+				    top: 40px;
+				    left: 9px;
+				    font-size: 15px;
+				}
+				i.lock-icon {
+					position: absolute;
+				    left: 10px;
+				    top: 105px;
+				}
+
+			}
+			a {
+				padding-left: 20px;
+			    font-family: MicrosoftJhengHeiRegular;
+			    font-size: 14px;
+			    color: #FF5E45;
+			    @include phone {
+		    	    padding-left: 0;
+			    }
+			}
+		}	
+	}
+	button {
+		float: right;
+	    background: #F56C23;
+	    border-radius: 3px;
+	    width: 125px;
+	    height: 32px;
+	    font-family: PingFangTC-Regular;
+	    font-size: 14px;
+	    color: #FFFFFF;
+	    margin-top: 30px;
+	}
+}
+
+

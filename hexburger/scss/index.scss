@@ -1,0 +1,367 @@
+@import "layout";
+@import "buttons-min";
+@import "forms-min";
+
+.feature {
+	background-color: $background-color;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.feature h3 {
+	text-align: center;
+	color:$main-color;
+	font-size: 20px;
+	line-height: 32px;
+	display: flex;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 31px;
+    @include phone {
+    	padding: 0;
+    	display: block;
+    }
+}
+
+.feature h3:hover {
+	font-size: 22px;
+}
+
+.feature h3::after,.feature h3::before {
+    content: "";
+    flex: 1;
+    border: none;
+    margin: 0 1.5rem;
+    border-top: 1.5px solid #979797;
+    font-weight: bold;
+    @include phone{
+    	display: none;
+    }
+}
+
+.featurebox {
+	color:$main-color;
+	float: left;
+	margin-left: 4%;
+	max-width: 28%;
+	text-align: center;
+	padding-left: 18px;
+	padding-right: 18px;
+	font-weight: bold;
+	@include phone {
+		float:none;
+		padding: 30px 0 0 0;
+		display: block;
+		margin-left: 5%;
+		max-width: 90%;
+	}
+	h2 {
+		padding-top: 20px;
+		padding-bottom: 11px;
+		font-size: 18px;
+	}
+	p {
+		text-align: left;
+		font-size: 16px;
+		line-height: 1.5em;
+		@include phone {
+			padding-left: 37px;
+			padding-right: 22px;
+		}
+	}
+	img {
+		border-radius: 50%;
+	}
+}
+
+.featurebox:hover h2 {
+		font-size: 20px;
+	}
+
+.intro-chef {
+	background-color: $main-color;
+	color:#EFE9E7;
+
+	// @include ipad {
+	// 	padding-left: 0;
+	// }
+	.intro-chef-box {
+		float: left;
+		max-width: 48%;
+		@include ipad {
+			padding-left: 1%;
+			overflow: hidden;
+		}
+		@include phone-s {
+			margin-left: 0;
+			max-width: 100%;
+			float: none;
+			display: block;
+			padding-left: 0;
+		}
+	}
+
+	img {
+		height: 460px;
+    	max-width: 470px;
+    	float: left;
+    	@include ipad {
+    		position: relative;
+    		left: -90px;
+    	}
+    	@include phone-s {
+    		left: 0;
+    		float: right;
+    	}
+	}
+		// max-width:100%;
+		// height:100%;
+		// @include phone {
+		// 	width: 100%;
+		// }
+	h3 {
+		line-height: 32px;
+		font-size: 20px;
+	}
+	span {
+		padding-bottom: 16px;
+		display: block;
+		font-size: 16px;
+		@include phone {
+			padding-bottom: 10px;
+		}
+	}
+	p {
+		display: inline-block;
+		font-size: 16px;
+		line-height: 1.5em;
+		@include ipad {
+			line-height: 1.2em;
+			padding-right: 25px;
+		}
+		@include phone {
+			line-height: 22px;
+			padding-right: 0;
+
+		}
+		@include phone-s {
+			padding-bottom: 30px;
+		}
+	}
+}
+.intro-chef .text {
+	padding: 40px 0px 0px 25px;
+	@include phone {
+		padding: 20px 0 0 10px;
+	}
+}
+
+.intro-chef:hover h3 {
+	font-size: 22px;
+}
+
+.intro-chef .pic {
+	line-height: 0;
+	margin-left: 4%;
+	overflow: hidden;
+	@include phone {
+		margin-left: 1%;
+	}
+	@include phone-s {
+		margin-left: 0;
+	}
+}
+
+.feedback {
+	text-align: center;
+	background: $background-color;
+	padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 50px;
+ 	h2 {
+		@include h2-style;
+		padding-top: 50px;
+	    padding-bottom: 50px;
+		letter-spacing: 2px;
+	}
+	h2:hover {
+		font-size: 28px;
+	}
+	li {
+		position: relative;
+		text-align: left;
+		float:left;
+		max-width: 32%;
+		line-height: 1.2em;
+		color: $main-color;
+		@include phone {
+			float:none;
+			display: block;
+			max-width:96%;
+		}
+		img {
+			position: absolute;
+    		top: 0;
+    		left: 0;
+    		border-radius:50%;
+		}
+		h3 {
+			@include h3-style;
+			margin-left: 80px;
+			padding-top: 22px;
+    		padding-bottom: 22px;
+		}
+		p {
+			margin-left: 80px;
+    		display: block;
+    		font-size: 16px;
+    		max-width: 100%;
+    		letter-spacing: 1px;
+			@include phone {
+    		letter-spacing: 1px;
+			max-width:none;
+			}
+    	}
+		span {
+			display: block;
+			float:right;
+			padding-top: 16px;
+		}
+	}
+
+	li:nth-child(1n+2){
+		margin-left: 2%;
+		@include phone {
+			margin-left: 0;
+		}
+	}
+}
+
+// Pure css START//
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+.button-xsmall {
+    font-size: 70%;
+}
+
+.button-small {
+    font-size: 85%;
+}
+
+.button-large {
+    font-size: 110%;
+}
+
+.button-xlarge {
+    font-size: 125%;
+}
+
+// Pure css END//
+
+.book {
+	background-color: #FFF;
+	padding-right: 4%;
+	padding-left: 4%;
+	padding-bottom: 50px;
+	h2 {
+		@include h2-style;
+		text-align: center;
+		padding-top: 50px;
+		padding-bottom: 38px;
+		letter-spacing: 2px;
+		line-height: 32px;
+	}
+	h2:hover {
+		font-size: 26px;
+	}
+	.book-box {
+		float: left;
+		width: 50%;
+		height: 386px;
+		@include phone {
+			float: none;
+			width: 100%;
+		}
+	}
+	.map {
+		background: url(../pics/Map.png);
+		max-width: 460px;
+    	height: 386px;
+    	@include phone {
+    	margin-bottom: 30px;
+    	}
+	}
+	.form {
+		padding-left: 20px;
+		font-size: 14px;
+		color: $main-color;
+		position: relative;
+		@include phone {
+			padding-left: 0;
+		}
+		label, p{
+			padding-bottom: 6px;
+		}
+		input {
+			width:100%;
+			margin-bottom: 12px;
+		}
+	}
+	.pure-radio input, 
+	.pure-radio {
+		display: inline;
+		width: auto;
+	}
+	#option-two {
+		margin-left: 36px;
+	}
+	ul {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		li {
+			display: inline;
+			button {
+				width: 70px;
+				font-size: 14px;
+				margin-left: 11px;
+    			height: 32px;
+			} 
+		}
+
+	}	
+	.cancel {
+	background-color: rgba(0,0,0,0.35); 
+	}
+}
+
+
+
+
+
+
+
