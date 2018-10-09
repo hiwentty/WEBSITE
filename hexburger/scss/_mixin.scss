@@ -1,3 +1,20 @@
+$main-color:#3D1101;
+$background-color: #EFE9E7;
+$font-l:24px;
+$font-m:18px;
+$font-s:16px;
+
+
+@mixin h2-style {
+    font-size: 24px;
+    color: $main-color;
+}
+
+@mixin h3-style {
+    color:$main-color;
+    font-size: 20px;
+}
+
 @mixin hide-text {
 	text-indent:101%;
 	overflow: hidden;

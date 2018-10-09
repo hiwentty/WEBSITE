@@ -2,7 +2,15 @@
 @import "mixin";
 
 
+@mixin h2-style {
+    font-size: 24px;
+    color: $main-color;
+}
 
+@mixin h3-style {
+    color:$main-color;
+    font-size: 20px;
+}
 
 .clearfix {
     @include clearfix;
