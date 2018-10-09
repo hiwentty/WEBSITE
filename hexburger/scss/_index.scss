@@ -322,8 +322,13 @@
 		@include phone {
 			padding-left: 0;
 		}
-		label, p{
+		label{
 			padding-bottom: 6px;
+			padding-top: 12px;
+		}
+		p {
+			margin-bottom: 12px;
+			margin-top: 15px;
 		}
 		input {
 			width:100%;
@@ -332,7 +337,7 @@
 	}
 	.pure-radio input, 
 	.pure-radio {
-		display: inline;
+		display: inline !important ;
 		width: auto;
 	}
 	#option-two {
@@ -349,12 +354,16 @@
 				font-size: 14px;
 				margin-left: 11px;
     			height: 32px;
+    			color: white;
 			} 
 		}
 
 	}	
 	.cancel {
 	background-color: rgba(0,0,0,0.35); 
+	}
+	.button-sent {
+	background-color: #F56C23 ;
 	}
 }
 

@@ -302,3 +302,5 @@
         height: 32px; }
   .book .cancel {
     background-color: rgba(0, 0, 0, 0.35); }
+  .book .button-sent {
+    background-color: #F56C23; }

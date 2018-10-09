@@ -93,7 +93,9 @@ img {
   height: 24px;
   float: left; }
   .logo a {
-    float: left; }
+    float: left;
+    width: 120px;
+    height: 24px; }
 
 .nav ul {
   float: right; }
@@ -538,14 +540,18 @@ img {
     @media (max-width: 767px) {
       .book .form {
         padding-left: 0; } }
-    .book .form label, .book .form p {
-      padding-bottom: 6px; }
+    .book .form label {
+      padding-bottom: 6px;
+      padding-top: 12px; }
+    .book .form p {
+      margin-bottom: 12px;
+      margin-top: 15px; }
     .book .form input {
       width: 100%;
       margin-bottom: 12px; }
   .book .pure-radio input,
   .book .pure-radio {
-    display: inline;
+    display: inline !important;
     width: auto; }
   .book #option-two {
     margin-left: 36px; }
@@ -559,9 +565,12 @@ img {
         width: 70px;
         font-size: 14px;
         margin-left: 11px;
-        height: 32px; }
+        height: 32px;
+        color: white; }
   .book .cancel {
     background-color: rgba(0, 0, 0, 0.35); }
+  .book .button-sent {
+    background-color: #F56C23; }
 
 .button-success,
 .button-error,
