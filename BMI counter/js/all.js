@@ -4,6 +4,8 @@ var elRecordArea = document.querySelector('.record-wrap');
 var elShowbox = document.querySelector('.result-showBox');
 var elBtnRefresh = document.querySelector('.btn-refresh');
 var elBtnClear = document.querySelector('.btn-clear');
+var elInputHeight = document.querySelector('.heightData');
+var elInputWeight = document.querySelector('.weightData');
 
 //取得localStorage的資料 若無則為空值
 var dataAry = JSON.parse(localStorage.getItem('BMIrecord')) || [];
@@ -221,3 +223,12 @@ function clear() {
 elBtnClear.addEventListener('click',clear);
 
 
+//加入點選輸入框 文字自動消失功能
+function valueDelete(e) {
+    console.log(e);
+    e.target.value = "";           
+}
+
+
+elInputHeight.addEventListener('focus',valueDelete);
+elInputWeight.addEventListener('focus',valueDelete);
