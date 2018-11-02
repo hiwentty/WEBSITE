@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contentÒ="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-CompatÒible" content="ie=edge">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+    <title>BMI 計算機</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="row header-row">
+                <div class="col-9">
+                    <img src="pic/BMICLogo.png" alt="" id="logo-BMI">
+                    <ul class="inputData">
+                        <li>
+                            <p>身高 cm</p>
+                            <input type="text" value="請輸入身高" class="heightData">
+                        </li>
+                        <li>
+                            <p>體重 kg</p>
+                            <input type="text"value="請輸入體重" class="weightData">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3 result-block">
+                    <a class="result-btn" href="#">看結果</a>
+                    <div class="result-showBox">
+                        <span class="scoreBMI">20.90</span><br>
+                        <p>BMI</p>
+                        <div class="btn-refresh"><a href="#">重新整理按鈕</a></div>
+                        <p class="msg-showState"><span class="weightState">理想</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>BMI紀錄</h1>
+            <div class="record-wrap">
+
+            </div>
+            <button type="button" class="btn btn-danger btn-clear">清除所有紀錄</button>
+        </div>    
+        <div id="footer">
+            <img src="pic/BMICLogo_footer.png" alt="">
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>

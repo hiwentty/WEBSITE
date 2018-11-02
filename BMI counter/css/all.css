@@ -1,0 +1,320 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+ul {
+    text-decoration:none;
+}
+
+
+/* header start */
+
+.header {
+  height: 300px;
+  background: #424242;
+  position: relative;
+  padding-top: 73px;
+}
+
+#logo-BMI {
+  float:left;
+  margin-top: 15px;
+}
+
+.header-row{
+  width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inputData {
+  float:right;
+  font-size: 18px;
+  color: #FFD366;
+  margin-right: 13px;
+}
+
+.inputData p{
+  padding-bottom: 7px;
+}
+
+.inputData li input {
+  border: 2px solid #FFD366;
+  border-radius: 10px; 
+  background: #646464;
+  color: rgba(255, 255, 255, 0.50);
+  width: 235px;
+  height: 40px;
+  margin-bottom: 23px;
+  padding-left: 16px;
+}
+
+/* result */
+
+.result-block {
+  position: relative;
+}
+
+.result-btn {
+  background: #FFD366;
+  width: 120px;
+  height: 120px;
+  display: block;
+  border-radius: 50%;
+  color: #424242;
+  padding: 48px 28.5px;
+  margin-top: 15px;
+}
+
+.result-btn:hover {
+  background: #ffd366b0;
+  color: #424242;
+  text-decoration: none;
+  color: white;
+}
+
+.result-showBox {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 120px;
+  background: #424242;
+  border-radius: 50%;
+  margin-top: 15px;
+  border: 6px solid #86D73E;
+  padding: 37px 11.5px;
+  color: #86D73E;
+  text-align: center;
+  font-size: 14px;
+  display:none;
+}
+.result-showBox span {
+  font-size: 32px;
+}
+
+.btn-refresh {
+  position: absolute;
+  bottom: 3px;
+  right: -4px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background:#86D73E;
+  background-image: url(../pic/icons_loop.png);
+  Text-indent:101%;
+  White-space:nowrap;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btn-refresh a {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.msg-showState {
+  width: 130px;
+  height: 32px;
+  position: absolute;
+  text-align: left;
+  right: -145px;
+  top: 37px;
+}
+
+
+
+
+/* header end */
+
+
+/* content START */
+.content{
+  min-height:635px;
+  background:#F5F5F5;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 24px;
+  color: #424242;
+  text-align: center;
+  padding-top: 48px;
+  padding-bottom: 36px;
+}
+
+.row-record {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  vertical-align: bottom;
+  height: 62px;
+  text-align: center;
+  border-left: 7px solid #86D73F;
+  background-color: white;
+  margin-bottom: 16px;
+}
+
+/*清除浮動*/
+.row-record:after {
+  content: ' ';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+
+.row-record li{
+  float:left;
+  width: 20%;
+  padding-top: 23px;
+}
+
+.row-record li span {
+  font-size: 20px;
+  padding-left: 7px;
+}
+
+.date {
+  padding-top: 3px;
+}
+
+.btn-clear {
+  margin-bottom: 15px;
+}
+
+/* content END */
+
+#footer {
+  background: #FFD366;
+  height: 90px;
+  text-align: center;
+}
+
+#footer img {
+  width: 55px;
+  height: 55px;
+  margin-top: 22px;
+}
+
+
+/* 用於機動性更改css樣式 */
+.hidden {
+  display:none ;
+}
+
+/* 體重理想時的樣式 */
+.show{
+  display: block;
+}
+
+/* 體重過輕時的樣式 */
+
+.light-showbox {
+  color:#31BAF9;
+  border-color:#31BAF9;
+}
+
+.light-btn {
+  background-color: #31BAF9;
+}
+
+.light-border {
+  border-color:#31BAF9;
+}
+
+/* 體重過重時的樣式 */
+
+.fat-showbox {
+  color: #FF982D;
+  border-color: #FF982D;
+}
+
+.fat-btn {
+  background-color: #FF982D;
+}
+
+.fat-border {
+  border-color: #FF982D;
+}
+
+/* 體重輕度肥胖時的樣式 */
+.l-fat-showbox {
+  color: #FF6C02;
+  border-color: #FF6C02;
+}
+
+.l-fat-btn {
+  background-color: #FF6C02;
+}
+
+.l-fat-border {
+  border-color: #FF6C02;
+}
+/* 體重中度肥胖時的樣式 */
+.m-fat-showbox {
+  color: #FF6C03;
+  border-color: #FF6C03;
+}
+
+.m-fat-btn {
+  background-color: #FF6C03;
+}
+
+.m-fat-border {
+  border-color: #FF6C03;
+}
+/* 體重重度肥胖時的樣式 */
+
+.h-fat-showbox {
+  color: #FF1200;
+  border-color: #FF1200;
+}
+
+.h-fat-btn {
+  background-color: #FF1200;
+}
+
+.h-fat-border {
+  border-color: #FF1200;
+}
