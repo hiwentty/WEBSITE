@@ -30,7 +30,6 @@ var app = new Vue({
       var newIndex = this.todos.findIndex(function (item) {
         return item.id == todo.id
       });
-      console.log(newIndex);
       this.todos.splice(newIndex, 1);
     },
     editTodo: function (item) {
