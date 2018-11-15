@@ -1,0 +1,95 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+body {
+  background: url(http://www.51pptmoban.com/d/file/2016/06/01/87e5ae3fc68c6fe29dc92bafc34c74ff.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: georgia;
+}
+
+.wrap {
+  margin: 5% 10% 10% 10%;
+  height: 700px;
+  text-align: center;
+  background-color: #ffffffc7;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+  padding-top: 26px;
+  padding-bottom: 8px;
+  font-family: Times New Roman;
+  font-weight: bolder;
+}
+
+@media (max-width:414px){
+  .wrap{
+    margin:2%;
+  }
+  #basic-addon1 {
+    display: none;
+  }
+  .pageButton {
+    padding: 0.5rem 0.5rem;
+  }
+  .footerMsg {
+    display: block !important;
+  }
+  .removeAll-link {
+    display: block;
+    margin-top:15px;
+    color:red;
+  }
+}
+.completed {
+  text-decoration: line-through
+}

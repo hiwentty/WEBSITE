@@ -14,6 +14,7 @@ xhr.onload = function() {
 
 
 
+//從匯入資料帶入地區名稱
 function countryOption() {
     //過濾區域的重複data
     let str1 = []
@@ -22,12 +23,12 @@ function countryOption() {
     }//製作區域矩陣
     const repeatFilter = str1.filter(function(element, index, arr){
     return arr.indexOf(element) == index;
-    });//過濾
+    });//過濾掉重複的地區,只回傳首次出現的資料index
 
-    //加入資料到選單中
-    let str2 = '<option>--請選擇行政區--</option>';
+    //將過濾後的資料加到選單中
+    let str2 = '<option disabled selected="selected">--請選擇行政區--</option>'; //預設為初始選項,選取後行政區後即失效
     for(let i = 0;i <  repeatFilter.length ;i++) {
-        str2 += '<option>'+repeatFilter[i]+'</option>';
+        str2 += `<option> ${repeatFilter[i]} </option>`;
     };
     elArea.innerHTML = str2;
 };
@@ -40,17 +41,17 @@ function listUpdate(e) {
         const select = e.target.value;     
         if(viewData[i].Zone == select) {
             str += 
-            '<li class="card">'+
-                '<div class="cardPic-box" style="background-image:url('+viewData[i].Picture1+')">'+
-                    '<span class="name-place">'+viewData[i].Name+'</span>'+
-                    '<span class="name-zone">'+viewData[i].Zone+'</span>'+
-                    '<div class="shadow"></div>'+
-                '</div>'+
-                '<p class="openTime"><img src="pic/icons_clock.png" alt="">'+viewData[i].Opentime+'</p>'+
-                '<p class="addresss"><img src="pic/icons_pin.png" alt="">'+viewData[i].Add+'</p>'+
-                '<p class="tel"><img src="pic/icons_phone.png" alt="" class="icon-phone">'+viewData[i].Tel+'</p>'+
-                '<p class="Ticketinfo"><img src="pic/icons_tag.png" alt="">'+viewData[i].Ticketinfo+'</p>'
-            '</li>'
+            `<li class="card">
+                <div class="cardPic-box" style="background-image:url( ${viewData[i].Picture1})">
+                    <span class="name-place"> ${viewData[i].Name} </span>
+                    <span class="name-zone"> ${viewData[i].Zone} </span>
+                    <div class="shadow"></div>
+                </div>
+                <p class="openTime"><img src="pic/icons_clock.png" alt=""> ${viewData[i].Opentime} </p>
+                <p class="addresss"><img src="pic/icons_pin.png" alt=""> ${viewData[i].Add} </p>
+                <p class="tel"><img src="pic/icons_phone.png" alt="" class="icon-phone"> ${viewData[i].Tel} </p>
+                <p class="Ticketinfo"><img src="pic/icons_tag.png" alt=""> ${viewData[i].Ticketinfo} </p>
+            </li>`
             const str2 = viewData[i].Zone;
             elCardWrap.innerHTML = str;
             elCardTitle.innerHTML = str2;
@@ -59,7 +60,7 @@ function listUpdate(e) {
 };
 
 elArea.addEventListener('change',listUpdate,false);
-
+//選單切換後自動更新列表
 
 
 
@@ -77,17 +78,17 @@ function showInfo(e) {
     for (let i = 0; i<viewDataLen;i++){
         if(target == "BUTTON" && select==viewData[i].Zone) {
             str += 
-            '<li class="card">'+
-                '<div class="cardPic-box" style="background-image:url('+viewData[i].Picture1+')">'+
-                    '<span class="name-place">'+viewData[i].Name+'</span>'+
-                    '<span class="name-zone">'+viewData[i].Zone+'</span>'+
-                    '<div class="shadow"></div>'+
-                '</div>'+
-                '<p class="openTime"><img src="pic/icons_clock.png" alt="">'+viewData[i].Opentime+'</p>'+
-                '<p class="addresss"><img src="pic/icons_pin.png" alt="">'+viewData[i].Add+'</p>'+
-                '<p class="tel"><img src="pic/icons_phone.png" alt="" class="icon-phone">'+viewData[i].Tel+'</p>'+
-                '<p class="Ticketinfo"><img src="pic/icons_tag.png" alt="">'+viewData[i].Ticketinfo+'</p>'
-            '</li>'
+            `<li class="card">
+                <div class="cardPic-box" style="background-image:url( ${viewData[i].Picture1} )">
+                    <span class="name-place"> ${viewData[i].Name} </span>
+                    <span class="name-zone"> ${viewData[i].Zone} </span>
+                    <div class="shadow"></div>
+                </div>
+                <p class="openTime"><img src="pic/icons_clock.png" alt=""> ${viewData[i].Opentime} </p>
+                <p class="addresss"><img src="pic/icons_pin.png" alt=""> ${viewData[i].Add} </p>
+                <p class="tel"><img src="pic/icons_phone.png" alt="" class="icon-phone"> ${viewData[i].Tel} </p>
+                <p class="Ticketinfo"><img src="pic/icons_tag.png" alt=""> ${viewData[i].Ticketinfo} </p>
+            </li>`
             const str2 = viewData[i].Zone;
             elCardWrap.innerHTML = str;
             elCardTitle.innerHTML = str2;
