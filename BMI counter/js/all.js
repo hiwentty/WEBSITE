@@ -101,6 +101,10 @@ function showResult() {
     //儲存資料到localStorage
     localStorage.setItem('BMIrecord', JSON.stringify(dataAry)); //資料轉換為字串後存入localStorage
 
+    //清除先前加入的樣式
+    elShowbox.classList.remove("light-showbox", "fat-showbox", "m-fat-showbox", "h-fat-showbox");
+    elBtnRefresh.classList.remove("light-btn", "fat-btn", "m-fat-btn", "h-fat-btn");
+
     //上方showBox樣式更改
     elShowbox.classList.add(bodyBMI[staus].showbox);
     elShowbox.classList.add(bodyBMI[staus].class);
